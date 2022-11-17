@@ -1,7 +1,5 @@
 package guru.springframework.spring5Webapp.damain;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
@@ -16,11 +14,11 @@ public class Author {
     private String lastName;
 
     @ManyToMany(mappedBy = "authors")
-    private Set<Books> books;
+    private Set<Book> books;
 
     public Author() {}
 
-    public Author(String firsName, String lastName, Set<Books> books) {
+    public Author(String firsName, String lastName, Set<Book> books) {
         this.firsName = firsName;
         this.lastName = lastName;
         this.books = books;
@@ -50,11 +48,11 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public Set<Books> getBooks() {
+    public Set<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(Set<Books> books) {
+    public void setBooks(Set<Book> books) {
         this.books = books;
     }
 

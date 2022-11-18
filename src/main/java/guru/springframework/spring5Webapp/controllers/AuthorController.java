@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.persistence.Entity;
 
-
+@Controller
 public class AuthorController {
     private final AuthorRepository authorRepository;
 

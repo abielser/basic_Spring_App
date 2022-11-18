@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.persistence.Entity;
 
-@Controller
+
 public class AuthorController {
     private final AuthorRepository authorRepository;
 
@@ -19,7 +19,7 @@ public class AuthorController {
         public String getAuthors(Model model) {
             model.addAttribute("authors",authorRepository.findAll());
 
-            return "author/list";
+            return "authors/list";
 
 
         }
